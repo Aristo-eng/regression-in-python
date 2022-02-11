@@ -15,10 +15,10 @@ Basics of linear regression and its implementation in the Python programming lan
 - Open
 - High 
 - Low
-- Close
-- ...
-- ...
--  ...
+- Close <br>
+...<br>
+...<br>
+...
 - Adj. Volume
 
 ‘High’ denotes the highest value of the day.
