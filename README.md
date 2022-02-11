@@ -31,5 +31,9 @@ Now, sometimes close values are regulated by the companies.
 The final value is the ‘Adj Close’ which is the same as ‘Close’ Value if the stock price is not regulated. 
 
 # Regression and label selection
+Created a column label to store forecasted values.
+we used Adj. Close feature
+
+
 
 
