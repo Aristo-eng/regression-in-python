@@ -7,6 +7,10 @@ import numpy as np
 import quandl as quandl
 import math
 
+from sklearn import preprocessing, svm
+from sklearn.linear_model import LinearRegression
+from sklearn.model_selection import train_test_split
+
 #Get data set
 data = quandl.get('WIKI/GOOGL')
 
@@ -37,3 +41,23 @@ print(forecast_out)
 df['label'] = df[forecast_col].shift(-forecast_out)
 df.dropna(inplace=True)
 print(df.head(5))
+
+# X: Everything except our label 
+# y: the label
+
+X = np.array(df.drop(['label'] , 1))
+y = np.array(df['label'])
+
+# scaling
+X = preprocessing.scale(X)
+
+# split the data set and shuffle the data set
+X_train , X_test, y_train, y_test = train_test_split(X,y , test_size= 0.2)
+
+# X_train and y_train are used to train our classifier
+clf = LinearRegression()
+clf.fit(X_train,y_train)
+accuracy = clf.score(X_test,y_test)
+print(accuracy)
+
+
