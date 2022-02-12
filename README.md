@@ -47,6 +47,8 @@ we used Adj. Close feature
 
 * print accuracy
 
+Change the model to svm to see how the accuracy works: pretty worse right? :))
+
 
 
 
