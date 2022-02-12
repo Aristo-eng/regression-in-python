@@ -34,6 +34,26 @@ The final value is the ‘Adj Close’ which is the same as ‘Close’ Value if
 Created a column label to store forecasted values.
 we used Adj. Close feature
 
+# REgression training and testing
+* import sklearn model
+
+* Specify X as everything except the label and y as the label
+
+* Scale x
+
+* split the data set, training 80% and testing 20%
+
+* use the classifier LinearRegression model and fit the data, and compute trhe accuracy on the test data
+
+* print accuracy
+
+
+
+
+
+
+
+
 
 
 
