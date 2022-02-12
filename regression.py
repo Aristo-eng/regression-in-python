@@ -54,10 +54,15 @@ X = preprocessing.scale(X)
 # split the data set and shuffle the data set
 X_train , X_test, y_train, y_test = train_test_split(X,y , test_size= 0.2)
 
-# X_train and y_train are used to train our classifier
-clf = LinearRegression()
+# X_train and y_train are used to train our classifier: Linear Regression
+clf = LinearRegression(n_jobs=10) # n_jobs creates batch , by default =1
 clf.fit(X_train,y_train)
 accuracy = clf.score(X_test,y_test)
-print(accuracy)
+print("Accuracy Linear Regression:", accuracy)
 
+# X_train and y_train are used to train our classifier: SVM
+clf_svm = svm.SVR()
+clf_svm.fit(X_train,y_train)
+accuracy_svm = clf_svm.score(X_test,y_test)
+print("Accuracy SVM:", accuracy_svm)
 
